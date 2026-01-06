@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Average Calculator</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 25px;
+            width: 320px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .output {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .output span {
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Average Calculator</h2>
+
+        <label for="score1">Score 1</label>
+        <input type="text" id="score1">
+
+        <label for="score2">Score 2</label>
+        <input type="text" id="score2">
+
+        <button py-click="compute_average">Compute</button>
+
+        <div class="output">
+            <p>Average: <span id="average">N/A</span></p>
+            <p>Passed?: <span id="result">N/A</span></p>
+        </div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
